@@ -1,0 +1,9 @@
+#!/bin/sh
+
+unset SESSION_MANAGER
+unset DBUS_SESSION_BUS_ADDRESS
+. /etc/X11/xinit/xinitrc-common
+[ -x /usr/bin/xsetroot ] && /usr/bin/xsetroot -solid '#222E45'
+[ -x /usr/bin/xterm ] && /usr/bin/xterm -geometry 180x50+10+10 -rv &
+[ -x /usr/bin/firefox ] && /usr/bin/firefox &
+[ -x /usr/bin/twm ] && exec /usr/bin/twm
